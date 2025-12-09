@@ -1,0 +1,7 @@
+* D:\lab\Memristor model\LTspice\memristor_yakopcic_sim.asc
+V1 N001 0 PULSE(-3.0 3.0 0 14 14 1p 28)
+XU1 N001 0 NC_01 MEM_YAKOPCIC
+.tran 0 56s 28
+.lib memristor_yakopcic.sub
+.backanno
+.end

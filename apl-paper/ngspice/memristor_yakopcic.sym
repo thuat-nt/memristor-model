@@ -1,0 +1,39 @@
+v {xschem version=3.4.5 file_version=1.2
+}
+G {}
+K {type=subcircuit
+spice_sym_def=".include /home/lamle/memristor/memristor_yakopcic.spice"
+format="@name @pinlist @symname a1=@a1 a2=@a2 b1=@b1 b2=@b2 Vp=@Vp Vn=@Vn
++Ap=@Ap An=@An xp=@xp xn=@xn alphap=@alphap alphan=@alphan xo=@xo eta=@eta
++xsvo=@xsvo i0=@i0 u1=@u1 u2=@u2 k1=@k1 k2=@k2"
+template="name=X1
+a1=0.17 a2=0.17 b1=0.05 b2=0.05 Vp=0.65 Vn=0.56
+Ap=4000 An=4000 xp=0.3 xn=0.5 alphap=1 alphan=5 xo=0.11 eta=1
+xsvo=2.075 i0=0 u1=0 u2=0 k1=0.1356 k2=3.1034"}
+V {}
+S {}
+E {}
+L 4 0 0 20 0 {}
+L 4 0 -30 0 -20 {}
+L 4 0 20 0 30 {}
+B 5 -2.5 27.5 2.5 32.5 {name=BE
+dir=inout}
+B 5 -2.5 -32.5 2.5 -27.5 {name=TE
+dir=inout}
+B 5 17.5 -2.5 22.5 2.5 {name=xsv
+dir=inout}
+A 4 -17.5 -10 20.15564437074637 330.2551187030577 59.48976259388451 {}
+A 4 17.5 -10 20.15564437074637 150.2551187030576 59.48976259388451 {}
+A 4 -17.5 10 20.15564437074637 330.2551187030577 59.48976259388451 {}
+A 4 17.5 10 20.15564437074637 150.2551187030576 59.48976259388451 {}
+T {@name} -27.5 -5 0 0 0.2 0.2 {}
+T {BE} -15 25 0 0 0.15 0.15 {layer=7}
+T {xsv} 17.5 -12.5 0 0 0.15 0.15 {layer=7}
+T {TE} -15 -35 0 0 0.15 0.15 {layer=7}
+T {@symname} 7.5 -22.5 0 0 0.15 0.15 {}
+T {Vp=@Vp | Vn=@Vn
+Ap=@Ap | An=@An
+xp=@xp | xn=@xn
+alphap=@alphap | alphan=@alphan
+xo=@xo | eta=@eta
+xsvo=@xsvo | i0=@i0} 10 10 0 0 0.1 0.1 {}
