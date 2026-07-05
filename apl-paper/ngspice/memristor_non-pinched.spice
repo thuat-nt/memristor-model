@@ -1,4 +1,4 @@
-.subckt memristor_yakopcic TE BE xsv a1=0.17 a2=0.17 b1=0.05 b2=0.05
+.subckt memristor_nonpinched TE BE xsv a1=0.17 a2=0.17 b1=0.05 b2=0.05
 +Vp=0.65 Vn=0.56 Ap=4000 An=4000 xp=0.3 xn=0.5 alphap=1 alphan=5 xo=0.11 eta=1
 +xsvo=2.075 u1=0 u2=0 k1=0.1356 k2=3.1034
 * Multiplicitive functions to ensure zero state
@@ -32,4 +32,4 @@ Gx 0 xsv value={eta*F(V(BE)-V(TE),V(xsv)-V(0))*G(V(BE)-V(TE)))}
 * Current source for memristor IV response
 Gm TE BE value = {IVRel((V(BE)-V(TE)),V(xsv)-V(0))}
 
-.ends memristor_yakopcic
+.ends memristor_nonpinched

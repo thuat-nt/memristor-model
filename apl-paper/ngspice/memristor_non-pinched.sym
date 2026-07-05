@@ -2,7 +2,7 @@ v {xschem version=3.4.5 file_version=1.2
 }
 G {}
 K {type=subcircuit
-spice_sym_def=".include /home/lamle/memristor/memristor_yakopcic.spice"
+spice_sym_def=".include ./memristor_non-pinched.spice"
 format="@name @pinlist @symname a1=@a1 a2=@a2 b1=@b1 b2=@b2 Vp=@Vp Vn=@Vn
 +Ap=@Ap An=@An xp=@xp xn=@xn alphap=@alphap alphan=@alphan xo=@xo eta=@eta
 +xsvo=@xsvo i0=@i0 u1=@u1 u2=@u2 k1=@k1 k2=@k2"
